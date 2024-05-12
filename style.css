@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #081b29;
+    color: #cdc5c5;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #cdc5c5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #cdc5c5;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+.home {
+    height: 100vh;
+    background: url('home1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+
+}
+
+.home-content {
+    max-width: 900px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .1s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.home-content .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.home-content .btn-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.8s;
+    z-index: 2;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transform: .5s;
+}
+
+.btn-box a:hover {
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.3s;
+    z-index: 2;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: #081b29;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover:before {
+    width: 100%;
+
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    transition: .3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+}
+
+.home-imgHover:hover {
+    background: transparent;
+    opacity: .8;
+}
+
+.home-imgHover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.7s;
+    z-index: 100;
+}
+
+.cv {
+    width: 100%;
+    padding: 50px 0px;
+    background: #081b29;
+}
+
+.heading {
+    font-size: 40px;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0 20px 0;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 10px;
+    border: 3px solid black;
+    color: black;
+    width: 60%;
+    margin-left: auto; 
+  margin-right: auto;
+  background: white;
+}
+
+.image img {
+    margin-left: 25%;
+}
+
+td {
+    font-size: 12px;
+    font-weight: 80;
+    padding: 4px;
+}
+.heading-table {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background: #FFC436;
+}
+
+.biodata ul {
+    padding: 10px;
+    font-weight: 300;
+    margin-left: 5%;
+}
+
+.biodata-value ul{
+    padding: 10px;
+    font-weight: 300;
+    margin-left: 2%;
+    list-style-type: none;
+}
+
+.medsos {
+    text-align: center;
+    color: black;
+    background: #FFC436;
+}
+
+.medsos a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 10px;
+}
+.medsos a:hover {
+    color: antiquewhite;
+}
+.medsos i {
+    padding: 5px;
+}
+
+.fa-github {
+    color: #000000;
+    font-size: 20px;
+}
+
+.fa-instagram {
+    color: #E1306C;
+    font-size: 20px;
+}
+
+.fa-facebook {
+    color: #3B5998;
+    font-size: 20px;
+}
+.fa-linkedin {
+    color: #0A66CA;
+    font-size: 20px;
+}
+
+.fa-youtube {
+    color: red;
+    font-size: 20px;
+}
+
+.contact {
+    background: #081b29;
+    padding-bottom: 40px;
+}
+.contact h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 42px;
+    padding-top: 100px;
+}
+
+.contact form {
+    max-width: 50rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: black;
+    background: whitesmoke;
+    border-radius: .8rem;
+    margin: .5rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+    padding-bottom: 15px;
+}
+ .me {
+    color: #FFC436;
+ }
+
+.btn-c {
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    background:#ffc436 ;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 20px;
+}
+
+.btn-c:hover {
+    color: #5e5353;
+    background: whitesmoke;
+    cursor: pointer;
+}
+
+.foot {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin: 15px;
+}
+
+/*KEYFRAME ANIMATION*/
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes maniActiveHover {
+    100% {
+        pointer-events: auto;
+    }
+}
